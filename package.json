@@ -4,7 +4,11 @@
     "author": "Caridy Patino <caridy@gmail.com>",
     "version": "0.0.1",
     "keywords": [
-        "yogi", "app", "external", "commands", "helpers"
+        "yogi",
+        "app",
+        "external",
+        "commands",
+        "helpers"
     ],
     "bin": {
         "yogi-app": "./bin/yogi-app.js"
@@ -12,5 +16,24 @@
     "preferGlobal": "true",
     "dependencies": {
         "timethat": "*"
+    },
+    "readmeFilename": "README.md",
+    "gitHead": "93c1dab203bd502e355d85829c9d4a4a1f0fbd61",
+    "devDependencies": {
+        "vows": "*"
+    },
+    "scripts": {
+        "pretest": "echo \"Error: no pre-test specified yet\" && exit 1",
+        "test": "echo \"Error: no test specified yet\" && exit 1"
+    },
+    "license": [
+        {
+            "type" : "BSD",
+            "url" : "https://github.com/yui/yogi/blob/master/LICENSE"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/caridy/yogi-app.git"
     }
 }
