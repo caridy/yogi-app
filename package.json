@@ -1,0 +1,16 @@
+{
+    "name": "yogi-app",
+    "description": "Yogi Commands for Applications",
+    "author": "Caridy Patino <caridy@gmail.com>",
+    "version": "0.0.1",
+    "keywords": [
+        "yogi", "app", "external", "commands", "helpers"
+    ],
+    "bin": {
+        "yogi-app": "./bin/yogi-app.js"
+    },
+    "preferGlobal": "true",
+    "dependencies": {
+        "timethat": "*"
+    }
+}
