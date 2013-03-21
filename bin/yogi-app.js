@@ -9,11 +9,14 @@ var YOGI_PATH = process.env.YOGI_PATH,
     path = require('path'),
     util = require(path.join(YOGI_PATH, 'lib/util')),
     log = require(path.join(YOGI_PATH, 'lib/log')),
-    args = require(path.join(YOGI_PATH, 'lib/args')),
     yogiCommands = require(path.join(YOGI_PATH, 'lib/cmds')),
     appCommands = require('../lib/cmds'),
-    options = args.parse(),
-    cmd = options.main || 'help';
+    options,
+    cmd;
+
+options = require(path.join(YOGI_PATH, 'lib/args')).parse();
+options = require('../lib/args').parse(options),
+cmd = options.main || 'help';
 
 if (options.main && options.main !== 'version') {
     log.info('using yogi-app@' + appCommands.version.version + ' on node@' + process.versions.node);
