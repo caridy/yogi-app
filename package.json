@@ -2,7 +2,7 @@
     "name": "yogi-app",
     "description": "Yogi sub commands for YUI Applications",
     "author": "Caridy Patino <caridy@gmail.com>",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "keywords": [
         "yogi",
         "app",

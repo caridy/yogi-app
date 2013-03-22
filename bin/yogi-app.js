@@ -11,11 +11,13 @@ var YOGI_PATH = process.env.YOGI_PATH,
     log = require(path.join(YOGI_PATH, 'lib/log')),
     yogiCommands = require(path.join(YOGI_PATH, 'lib/cmds')),
     appCommands = require('../lib/cmds'),
+    args = require(path.join(YOGI_PATH, 'lib/args')),
     options,
     cmd;
 
-options = require(path.join(YOGI_PATH, 'lib/args')).parse();
-options = require('../lib/args').parse(options),
+// expanding yogi args
+args.known.dirs = String;
+options = args.parse();
 cmd = options.main || 'help';
 
 if (options.main && options.main !== 'version') {
@@ -23,7 +25,6 @@ if (options.main && options.main !== 'version') {
 }
 
 yogiCommands[cmd] = yogiCommands[cmd] || {};
-
 util.mix(yogiCommands[cmd], appCommands[cmd] || {});
 
 if (yogiCommands[cmd] && yogiCommands[cmd].init) {
